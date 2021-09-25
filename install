@@ -659,7 +659,7 @@ code="${code:-$VERSION_ID}"
 code="${code,,}"
 verbose "Validating dist-code: ${dist}-${code}"
 case "${dist}-${code}" in
-  ubuntu-18.04)
+  ubuntu-18.04 | ubuntu-18.04.5)
     code="bionic"
     is_ubuntu_dist=true
     is_ubuntu_bionic=true
