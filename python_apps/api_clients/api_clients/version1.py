@@ -144,13 +144,15 @@ class AirtimeApiClient(object):
 
     def __get_airtime_version(self):
         try:
-            return self.services.version_url()["airtime_version"]
+        #    return self.services.version_url()["airtime_version"]
+            return self.config["general"]["airtime_version"]
         except Exception:
             return -1
 
     def __get_api_version(self):
         try:
-            return self.services.version_url()["api_version"]
+        #    return self.services.version_url()["api_version"]
+            return self.config["general"]["api_version"]
         except Exception as e:
             self.logger.exception(e)
             return -1
