@@ -20,7 +20,7 @@
             this.playerMode = "<?php echo $this->playerMode ?>";
             this.settings = {
                 'elementId': id_element,    // leave alone
-                'autoplay': false,          // or true (only works on some browsers)
+                'autoplay': true,          // or true (only works on some browsers)
                 'forceHTTPS': false,         // or true if the stream is in SSL (beware of the listening port, usually 8000)
                 'replacePort': false,        // false for disabled or '8000' as the usual start port, forces to specify replacePortTo.
                 'replacePortTo': ''          // either '' to use the default port of the browser (80/http, 443/https) or '8443' to force the port of the stream.
@@ -39,6 +39,12 @@
                 this.settings.url = stream["url"];
                 this.settings.codec = stream["codec"];
             }
+
+	    var portRegex=/\:([0-9]+)/i
+	    //trim the port 35112 completely. all konnekt radio streams will work behind a proxy on port 80
+
+	    this.settings.url=this.settings.url.replace(portRegex,'');
+	    
 
             // Create the Muses player object
             playerhtml5_insert(this.settings);
