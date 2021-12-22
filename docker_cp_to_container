@@ -1,0 +1,6 @@
+#picking konnekt customizations from git repo
+
+docker cp airtime_mvc/public/css libretime-core:/usr/share/airtime/php/airtime_mvc/public
+docker cp airtime_mvc/application/views/scripts/index/index.phtml libretime-core:/usr/share/airtime/php/airtime_mvc/application/views/scripts/index/index.phtml
+docker cp airtime_mvc/application/views/scripts/embed/player.phtml libretime-core:/usr/share/airtime/php/airtime_mvc/application/views/scripts/embed/player.phtml
+docker cp airtime_mvc/application/layouts/scripts/radio-page.phtml libretime-core:/usr/share/airtime/php/airtime_mvc/application/layouts/scripts/radio-page.phtml
