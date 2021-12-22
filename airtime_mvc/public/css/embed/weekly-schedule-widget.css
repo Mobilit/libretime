@@ -24,7 +24,8 @@ body {
     list-style: none;
     padding-left: 0px;
     margin: 0px;
-    background: rgba(69, 155, 143, 0.8);
+    #background: rgba(69, 155, 143, 0.8);
+    background: #FDB515
 }
 
 .schedule .tabs li {
@@ -43,15 +44,17 @@ body {
 }
 
 .schedule .tabs li.active {
-    background: #459B8F;
+    #background: #459B8F;
+    background: #FEE000;
 }
 
 .schedule .tabs li.active:hover {
-    background: #459B8F;
+    background: #FEE001;
 }
 
 .schedule .tabs li:hover {
-    background: rgba(69, 155, 143, 0.6)
+    #background: rgba(69, 155, 143, 0.6)
+    background: #FEE000
 }
 
 .schedule_content {

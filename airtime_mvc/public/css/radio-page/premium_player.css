@@ -26,15 +26,15 @@ body {
 }
 
 .bottom_bar .cont_btn:hover {
-    background-color: #409187;
+    background-color: #FDB515;
 }
 
 .bottom_bar .play {
-    background: #459B8F url('img/play.png') no-repeat center center;
+    background: #FDB515 url('img/play.png') no-repeat center center;
 }
 
 .bottom_bar .pause {
-    background: #459B8F url('img/pause.png') no-repeat center center;
+    background: #FDB515 url('img/pause.png') no-repeat center center;
 }
 
 .on_air {
