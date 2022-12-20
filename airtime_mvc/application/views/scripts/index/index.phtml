@@ -56,9 +56,12 @@
     if ($this->displayRssTab) {?>
         <div id="tab-4" class="podcast tab_content">
             <div class="rss-title-wrapper">
-                <div id="rss-subscribe">
+		<!-- remove subscription to podcast, it is confusing new users
+		
+		<div id="rss-subscribe">
                     <a target="_blank" href="<?php echo $this->stationPodcastRssUrl ?>" class="rss_icon"><span><?php echo _("Subscribe") ?></span><img src="css/radio-page/img/rss.png"></a>
-                </div>
+		</div>
+		-->
                 <div id="rss-title">
                     <?php echo $this->podcastTitle ?>
                 </div>
@@ -144,6 +147,12 @@
                             title: value.CcFiles.track_title,
                             artist: value.CcFiles.artist_name,
                         }
+
+			//update value.download_url to use https scheme
+			  var protocolRegex=/^http\:/i
+	    		//convert to https to avoid browser security warning in production
+	    		value.download_url=value.download_url.replace(protocolRegex,'https:');
+
 
                         if (value.mime == "mp3") {
                             media.mp3 = value.download_url;
